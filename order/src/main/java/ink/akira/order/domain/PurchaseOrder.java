@@ -1,5 +1,7 @@
 package ink.akira.order.domain;
 
+import java.util.Date;
+
 public class PurchaseOrder {
     private Integer id;
 
@@ -12,6 +14,8 @@ public class PurchaseOrder {
     private String address;
 
     private String status;
+
+    private Date createTime;
 
     public Integer getId() {
         return id;
@@ -59,5 +63,13 @@ public class PurchaseOrder {
 
     public void setStatus(String status) {
         this.status = status == null ? null : status.trim();
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }
